@@ -1,0 +1,16 @@
+puts "Steven Segal"
+
+p "ToJones"
+
+#p more useful for devs
+
+p 3
+
+p "4"
+
+#tells you what a string is etc
+
+print "LineBreak\n Test"
+puts
+puts "LineBreak\n Test"
+p "LineBreak\n Test"
