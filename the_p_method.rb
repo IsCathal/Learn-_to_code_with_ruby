@@ -14,3 +14,6 @@ print "LineBreak\n Test"
 puts
 puts "LineBreak\n Test"
 p "LineBreak\n Test"
+
+# puts "test"
+# commmand plus forward slash is how to comment whole line
