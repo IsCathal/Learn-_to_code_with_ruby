@@ -7,19 +7,21 @@ current_index = 0
 
 final_index = money.length - 1 #starts at zero
 
+first_money_index = nil
+
 while current_index <= final_index
     # if money[current_index] == "¢"
-    if money[current_index] != "¢"
-        current_index += 1
-        puts money[current_index]
-
+    if money[current_index] == "¢"
+        first_money_index = current_index
         # pretty sure java wont complile here, if a loop has no exit
-        next # next keyword tells the loop to go back up again to beginning
+        break #breaks the loop
+
     end
 
 
-    puts "Found ¢ at index #{current_index}"
+  
     current_index +=1
       
-    
 end
+
+puts "first_money index is #{first_money_index}"
