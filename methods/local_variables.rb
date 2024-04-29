@@ -10,6 +10,8 @@ def film_movie
 
     #puts hello
     #its not in here
+    #like a serperate program running
+    #not in scope
 end
 
 film_movie

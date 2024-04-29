@@ -18,5 +18,8 @@ end
 praise_persin("Charlie")
 
 #dose ruby support this
+#Yes it does
+#Method Overloading kinda
+
 praise_two_persin("Charlie", "cathal", 35)
 
