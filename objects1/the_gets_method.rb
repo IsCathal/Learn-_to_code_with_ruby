@@ -10,3 +10,4 @@ p age = 345
 age = gets.chomp
 
 puts "Your name is #{name} and you are #{age} years old"
+
