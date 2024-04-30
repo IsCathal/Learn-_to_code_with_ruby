@@ -8,13 +8,11 @@
 def recurse(num)
 
     if num == 1
-        return 1
-    
-else 
+     return 1
+    else 
     num*recurse(num-1)
-
-    #something like num*recurse(num-1)
-end
+     #something like num*recurse(num-1)
+    end
 end
 
 puts recurse(5)
