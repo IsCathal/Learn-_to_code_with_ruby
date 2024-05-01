@@ -8,6 +8,8 @@
 # Examples:
 
 #slice is start and length
+
+#demo used .first method and .last method similar logic
 def split_in_two(arr)
     len = arr.length
     mid = len/2
