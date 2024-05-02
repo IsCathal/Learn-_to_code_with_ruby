@@ -1,0 +1,11 @@
+# to_a
+letters_range = "A".."T"
+p letters_range.class
+
+p letters_range.to_a.class
+
+toArray = letters_range.to_a
+p letters_range.class
+
+
+p toArray
