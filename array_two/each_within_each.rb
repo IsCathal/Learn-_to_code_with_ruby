@@ -6,6 +6,4 @@ shirts. each do |shirt| #striped
     ties.each do |tie|
         puts shirt + " " + tie
     end
-
-
 end
