@@ -17,3 +17,9 @@ p adder
 def addertwo(a, b, *numbers)
 
 end
+
+
+#can also do this, last two are required, so if 4 elements it will goto a,b,c,d numbers is empty array =[]
+def addertwo(a, b, *numbers, c, d)
+
+end
