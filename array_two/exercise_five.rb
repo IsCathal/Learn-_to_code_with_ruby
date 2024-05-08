@@ -11,6 +11,7 @@
 
 def custom_max(arr)
 
+    max = arr[0]
 
     
     if arr.length == 0
@@ -18,16 +19,14 @@ def custom_max(arr)
         return nil 
 
     else
-        arr.each_with_index do |number, index| 
-            max = number
-
-            if  number > max
-              p  max = number
+        arr.each do |value|
+            if value > max
+                max = value
             end
         
     end
 
-    return 
+    return max
 end
 end
 # Examples:
