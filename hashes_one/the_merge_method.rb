@@ -8,3 +8,9 @@ p market.merge(kitchen)
 
 p market
 p kitchen
+
+#bang will replace curreny hash\
+
+market.merge!(kitchen)
+
+p market
