@@ -20,7 +20,7 @@ d = :hello
 e = :test
 
 
-#only one sybol stored- were not updating it
+#only one sybol stored- were not updating it reduce memoery
 puts a.object_id
 puts b.object_id
 puts c.object_id

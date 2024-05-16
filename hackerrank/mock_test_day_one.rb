@@ -6,7 +6,7 @@
 #
 def findMedian(arr)
     # Write your code here
-    len = arr.length
+    len = arr.lengthshould relay 
     s = arr.sort
     half = len/2
    
