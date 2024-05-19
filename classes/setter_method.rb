@@ -41,4 +41,5 @@ class Computer
    p  pc.storage
    p  pc.price
    p  pc.price=(10) 
+   # can also do this pc.price = 10
    p  pc.price

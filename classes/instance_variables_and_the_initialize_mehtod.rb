@@ -18,6 +18,8 @@ class Guitar
     def initialize
         #Stored on the guitar object
         #starting state
+        #private
+        #no way for an object to overwrite them
         @type = "Acoustic"
         @wood = "alder"
         @strings = 6

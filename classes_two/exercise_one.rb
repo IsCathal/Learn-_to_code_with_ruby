@@ -51,6 +51,8 @@ class Product
    end
 
    def price=(new_price)
+
+    #one liner @price = price if price > 0
     @price = new_price if valid_price?(new_price)
    end
 
@@ -65,15 +67,19 @@ class Product
    end
 
    def valid_name?(new_name)
-    p "in method tester"
         if new_name.length.between?(3, 20)
          true
         else
-        
            @name= "TBD"
            false
         end
     end
+
+    #easier
+    # if.name.length >= 3 && name.length <=20
+#         @name = name 
+# else
+#     @name = "TBD"
 
 end
 

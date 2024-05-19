@@ -7,6 +7,7 @@ hobbies = ["Soocer", "Cycling"].freeze
 # name << "smarts"
 
 # name.upcase!
+# dup is going to give you back a mon frozen copy
 
 p name.dup.upcase!
 

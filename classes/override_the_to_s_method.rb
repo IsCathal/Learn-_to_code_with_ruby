@@ -9,7 +9,7 @@ class Guitar
      "An #{@type} #{@wood} guitar with #{@strings} strings " 
     end
 
-
+#can define a to_s method in your bidy
     def to_s
         "printoutoverwrittenmewthod"
     end

@@ -3,4 +3,3 @@ p String.new("Cathal")
 p Array.new(10)
 
 
-p {}.class

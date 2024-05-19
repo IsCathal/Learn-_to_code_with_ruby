@@ -13,7 +13,7 @@
 class Project
     def initialize
         @name = 'Q4 Tech Updates'
-        @budget = 10000
+        @budget = 100000
         @team_members = ["Piers", "Rob", "Jon"]
       end
 

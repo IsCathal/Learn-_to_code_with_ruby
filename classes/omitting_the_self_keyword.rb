@@ -16,6 +16,7 @@ class Computer
         # self.nil_details
         # self.class_details
         #ruby does self behind the scene's
+        #wont work on keywords class etc
         nil_details
         class_details
     end

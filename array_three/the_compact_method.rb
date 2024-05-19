@@ -5,6 +5,6 @@ p [1, nil, 2 ,3, nil].compact
 
 sports = ["Football", "Soccer", nil, "Baseball", nil ]
 
-sportd.compact!
+sports.compact!
 
 p sports

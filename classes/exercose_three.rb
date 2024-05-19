@@ -12,7 +12,7 @@ class Cake
         slice_a_cake = "Slicing the cake"
     end
 
-    def sold 
+    def sell 
         sold_the_cake = "Sold the cake"
     end
 end

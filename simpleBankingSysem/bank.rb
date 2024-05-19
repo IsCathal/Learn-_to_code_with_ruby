@@ -8,6 +8,8 @@
 
 #its looping with the greater number of users ahah
 #remove loop lazy
+require "minitest/autorun"
+
 
 class Bank 
 
@@ -117,7 +119,12 @@ usercount = 0
 
 
 
-
+class TestBank < Minitest::Test
+    def test_name 
+        charlie = Bank.new("Charlie")
+        assert_equal("Charlie", charlie.name)
+    end
+end
 
 
 

@@ -14,4 +14,4 @@ p Guitar.new
 
 electric = Guitar.new
 
-acsustic - Guitar.new      
+acsustic = Guitar.new      
