@@ -6,6 +6,9 @@
 # going to keep a rough hacked version and have a cleaned up
 #need to figure out loop a while loop
 
+#its looping with the greater number of users ahah
+#remove loop lazy
+
 class Bank 
 
     attr_reader :accountNumber, :name
@@ -60,18 +63,15 @@ usercount = 0
          users_Array.each do | objectImade |
             if objectImade.accountNumber == user_input_account_number
                 objectImade.money += deposit
-                puts "#{deposit} has been deposited into your account"
                 puts
-            else
-                puts "Try entering correct info next time!"
-           
             end
+
          end
          puts
 
     when 3
         puts "Enter your account number:"
-        accountNumber = gets.to_i
+        user_input_account_number = gets.to_i
         puts "Enter the amount to withdraw" 
         deposit = gets.to_i
         users_Array.each do | objectImade |
@@ -79,8 +79,6 @@ usercount = 0
                 objectImade.money -= deposit
                 puts
                 puts "#{deposit} has been withdrawn into your account"
-            else
-                puts "Try entering correct info next time!"
                 puts
             end
            
@@ -89,21 +87,17 @@ usercount = 0
         
      when 4 
         puts "Enter your account number:"
-        accountNumber = gets.to_i
+        user_input_account_number = gets.to_i
        
         balance = 0 
         users_Array.each do | objectImade |
             if objectImade.accountNumber == user_input_account_number
                 balance = objectImade.money
                 puts "Your current balance is #{balance}"
-
-            else
-                puts "Try entering correct info next time!"
                 puts
-            end
-          
-         end
-         puts
+
+           end
+        end
         
         else
            "Error, Please enter Number between 1 and 5"
