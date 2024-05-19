@@ -19,9 +19,6 @@ class Bank
         @money = 0
         @accountNumber = generate_account_number
     end
-
-    def account_number_deposit(accountNumber, deposit)
-    end
     
     private
 

@@ -55,3 +55,7 @@ end
 end
 
 p tom 
+
+#just going to do ineffien loop for now
+
+#must t=be a method for array and objects
