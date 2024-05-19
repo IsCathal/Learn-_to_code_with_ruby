@@ -97,7 +97,8 @@ usercount = 0
         end
         
         else
-           "Error, Please enter Number between 1 and 5"
+         puts  "Error, Please enter Number between 1 and 5"
+         puts
 
         end
 
