@@ -60,11 +60,14 @@ usercount = 0
          users_Array.each do | objectImade |
             if objectImade.accountNumber == user_input_account_number
                 objectImade.money += deposit
+                puts "#{deposit} has been deposited into your account"
+                puts
             else
                 puts "Try entering correct info next time!"
-            puts "#{deposit} has been deposited into your account"
+           
             end
          end
+         puts
 
     when 3
         puts "Enter your account number:"
@@ -74,10 +77,14 @@ usercount = 0
         users_Array.each do | objectImade |
             if objectImade.accountNumber == user_input_account_number
                 objectImade.money -= deposit
+                puts
+                puts "#{deposit} has been withdrawn into your account"
             else
                 puts "Try entering correct info next time!"
-            puts "#{deposit} has been withdrawn into your account"
+                puts
             end
+           
+            puts
          end
         
      when 4 
@@ -88,12 +95,15 @@ usercount = 0
         users_Array.each do | objectImade |
             if objectImade.accountNumber == user_input_account_number
                 balance = objectImade.money
+                puts "Your current balance is #{balance}"
+
             else
                 puts "Try entering correct info next time!"
-            puts "#{deposit} has been withdrawn into your account"
+                puts
             end
+          
          end
-         puts "Your current balance is #{balance}"
+         puts
         
         else
            "Error, Please enter Number between 1 and 5"
