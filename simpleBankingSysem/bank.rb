@@ -8,7 +8,7 @@
 
 #its looping with the greater number of users ahah
 #remove loop lazy
-require "minitest/autorun"
+
 
 
 class Bank 
@@ -31,8 +31,8 @@ class Bank
 
 end
 
-users_Array = []
-usercount = 0
+    users_Array = []
+    usercount = 0
 
     puts "Welcome to the Simple Banking System! 
     1. Create an account 
@@ -50,7 +50,7 @@ usercount = 0
          puts "Enter your name:"
          name = gets
          users_Array << Bank.new(name)
-         puts " Your account has been created successfully. Your account number is #{users_Array[usercount].accountNumber}"
+         puts "Your account has been created successfully. Your account number is #{users_Array[usercount].accountNumber}"
          puts
          usercount += 1
          
@@ -68,7 +68,7 @@ usercount = 0
          end
          puts
 
-    when 3
+     when 3
         puts "Enter your account number:"
         user_input_account_number = gets.to_i
         puts "Enter the amount to withdraw" 
@@ -98,36 +98,19 @@ usercount = 0
            end
         end
         
-        else
-         puts  "Error, Please enter Number between 1 and 5"
-         puts
+    else
+        puts  "Error, Please enter Number between 1 and 5"
+        puts
 
-        end
-
-           puts "Welcome to the Simple Banking System! 
-           1. Create an account 
-           2. Deposit money 
-           3. Withdraw money 
-           4. Check balance 
-           5. Exit"
-           user_input_number = gets.to_i
     end
 
+        puts "Welcome to the Simple Banking System! 
+        1. Create an account 
+        2. Deposit money 
+        3. Withdraw money 
+        4. Check balance 
+        5. Exit"
+        user_input_number = gets.to_i
+    end
     
-
     puts "Thank you for using the Simple Banking System. Goodbye!"
-
-
-
-class TestBank < Minitest::Test
-    def test_name 
-        charlie = Bank.new("Charlie")
-        assert_equal("Charlie", charlie.name)
-    end
-end
-
-
-
-
-
-
