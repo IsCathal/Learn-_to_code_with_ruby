@@ -8,7 +8,8 @@
 
 class Bank 
 
-    attr_reader :accountNumber, :money
+    attr_reader :accountNumber, :name
+    attr_accessor :money
 
     def initialize(name)
         @name = name
@@ -16,22 +17,20 @@ class Bank
         @accountNumber = generate_account_number
     end
 
-    def account_number_balanceChecket(accountNumber)
-        money
+    def account_number_deposit(accountNumber, deposit)
     end
     
     private
 
     def generate_account_number
         random_number = rand(10_000..99_999)
-        another_random_number = rand(10_000..99_999)
-        "2024 -#{random_number}-#{another_random_number}"
     end
 
 
 end
 
 users_Array = []
+usercount = 0
 
     puts "Welcome to the Simple Banking System! 
     1. Create an account 
@@ -49,25 +48,52 @@ users_Array = []
          puts "Enter your name:"
          name = gets
          users_Array << Bank.new(name)
-         puts " Your account has been vreated successfully. Your account number is "
-         p users_Array
+         puts " Your account has been created successfully. Your account number is #{users_Array[usercount].accountNumber}"
+         puts
+         usercount += 1
          
      when 2
          puts "Enter your account number:"
-         accountNumber = gets
+         user_input_account_number = gets.to_i
          puts "Enter the amount to deposit" 
-         deposit = gets
-         
-     when 3
+         deposit = gets.to_i
+         users_Array.each do | objectImade |
+            if objectImade.accountNumber == user_input_account_number
+                objectImade.money += deposit
+            else
+                puts "Try entering correct info next time!"
+            puts "#{deposit} has been deposited into your account"
+            end
+         end
+
+    when 3
         puts "Enter your account number:"
-        accountNumber = gets
+        accountNumber = gets.to_i
         puts "Enter the amount to withdraw" 
-        deposit = gets
+        deposit = gets.to_i
+        users_Array.each do | objectImade |
+            if objectImade.accountNumber == user_input_account_number
+                objectImade.money -= deposit
+            else
+                puts "Try entering correct info next time!"
+            puts "#{deposit} has been withdrawn into your account"
+            end
+         end
         
      when 4 
         puts "Enter your account number:"
-        accountNumber = gets
-        puts "Your current balance is "
+        accountNumber = gets.to_i
+       
+        balance = 0 
+        users_Array.each do | objectImade |
+            if objectImade.accountNumber == user_input_account_number
+                balance = objectImade.money
+            else
+                puts "Try entering correct info next time!"
+            puts "#{deposit} has been withdrawn into your account"
+            end
+         end
+         puts "Your current balance is #{balance}"
         
         else
            "Error, Please enter Number between 1 and 5"

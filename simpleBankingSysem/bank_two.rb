@@ -31,9 +31,15 @@ class Bank
 
 end
 
-#going to have to make default user I think
+puts "Welcome to the Simple Banking System! 
+1. Create an account 
+2. Deposit money 
+3. Withdraw money 
+4. Check balance 
+5. Exit"
+
+user_input_number = gets.to_i
 user_one = Bank.new("tempName")
-user_input_number = 0
 users_Array = []
 
 def printWelcome 
@@ -44,33 +50,44 @@ puts "Welcome to the Simple Banking System!
 4. Check balance 
 5. Exit"
 
-
-end
-user_input_number = gets.to_i
+user_input_number == gets.to_i
 p user_input_number
+end
 
-printWelcome
 
+    #While not 5 keep going
     p "user input before while #{user_input_number}"
     while user_input_number != 5
 
+        p "user input after while #{user_input_number}"
+
+        #hack break here
+        if user_input_number == 5
+            break
+        end
       case user_input_number
          when 1
-            puts "Enter your name:"
-             name = gets
-            users_Array << Bank.new(name)
-             puts " Your account has been vreated successfully. Your account number is #{user_one.accountNumber}"
-             p users_Array
+          #need to figure out how to hangle multiple users
+        #maybe a count
+      puts "Enter your name:"
+         name = gets
+         # create account here, array and push or something
+         # an array of objects might work!
+    
+         users_Array << Bank.new(name)
+         puts " Your account has been vreated successfully. Your account number is #{user_one.accountNumber}"
+         p users_Array
          
-        when 2
-            puts "Enter your account number:"
+     when 2
+         puts "Enter your account number:"
 
 
         else
            "Error, Please enter Number between 1 and 5"
 
         end
-     printWelcome
+        p "last line of while"
+        printWelcome
     end
 
     puts "Thank you for using the Simple Banking System. Goodbye!"
