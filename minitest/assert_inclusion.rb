@@ -1,11 +1,16 @@
 require "minitest/autorun"
 
 class Pokemon
-    attr_reader :name, :type
+    attr_reader :name, :type, :attacks
 
     def initialize(name, type)
         @name = name
         @type = type
+        @attacks = []
+    end
+
+    def add_attack(attack)
+        attacks << attack
     end
 
 end
@@ -18,6 +23,7 @@ class TestPokemon < Minitest::Test
 
     def teardown
       #Run this method after each test
+      puts " testing is done"
      end
 
     def test_name 
@@ -26,6 +32,12 @@ class TestPokemon < Minitest::Test
 
     def test_type
         assert_equal(:electric, @pikachu.type)
+      end
+
+      def test_adding_new_power
+        @pikachu.add_attack("Electric Shock")
+        @pikachu.add_attack("Shock Bolt")
+        assert_includes(@pikachu.attacks, "Electric Stock")
       end
 
 end
