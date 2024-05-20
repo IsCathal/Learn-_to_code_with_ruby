@@ -49,7 +49,8 @@ puts "Welcome to the Simple Banking System!
 3. Withdraw money 
 4. Check balance 
 5. Exit"
-
+# if i had made this an instance variabel 
+# @user_input_number then  this might have worked
 user_input_number == gets.to_i
 p user_input_number
 end
