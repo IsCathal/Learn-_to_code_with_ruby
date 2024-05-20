@@ -23,8 +23,10 @@ def word_frequency(text)
     counts = Hash.new(0)
     # removes the need for if count[word].nil?, as we set all to 0
     words = text.split(" ")
-    words.each { |word| counts|word| +=1 }
+    words.each { |word| counts[word] += 1 }
     counts
+
+   p text.split(" ").tally
 
 
 end
