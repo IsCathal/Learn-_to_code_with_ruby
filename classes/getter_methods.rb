@@ -24,6 +24,7 @@ class Computer
    end
 
   end
+
   
 
    pc = Computer.new

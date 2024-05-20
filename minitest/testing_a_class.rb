@@ -18,6 +18,7 @@ class TestPokemon < Minitest::Test
 
     def teardown
       #Run this method after each test
+      puts " testing is done"
      end
 
     def test_name 

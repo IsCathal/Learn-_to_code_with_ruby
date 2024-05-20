@@ -1,7 +1,5 @@
 require_relative "account"
-users_Array = []
-usercount = 0
-
+accounts = {}
 puts "Welcome to the Simple Banking System! 
 1. Create an account 
 2. Deposit money 
@@ -16,8 +14,9 @@ user_input_number = gets.to_i
     when 1
       puts "Enter your name:"
       name = gets
-      users_Array << Account.new(name)
-      puts "Your account has been created successfully. Your account number is #{users_Array[usercount].account_number}"
+      name = Account.new(name)
+      accounts.store(name.account_number, name.money)
+      puts "Your account has been created successfully. Your account number is #{name.account_number}"
       puts
       usercount += 1
     when 2
@@ -25,41 +24,25 @@ user_input_number = gets.to_i
       user_input_account_number = gets.to_i
       puts "Enter the amount to deposit" 
       deposit = gets.to_i
-      users_Array.each do | objectImade |
-        if objectImade.account_number == user_input_account_number
-            objectImade.money += deposit
-            puts
-        end
-        end
+      accounts[user_input_account_number] += deposit
     when 3
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
       puts "Enter the amount to withdraw" 
       deposit = gets.to_i
-      users_Array.each do | objectImade |
-        if objectImade.account_number == user_input_account_number
-            objectImade.money -= deposit
-            puts
-            puts "#{deposit} has been withdrawn into your account"
-            puts
-        end
-        end
+      accounts[user_input_account_number] -= deposit
+      puts "#{deposit} has been withdrawn into your account"
+
     when 4 
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
       balance = 0 
-      users_Array.each do | objectImade |
-        if objectImade.account_number == user_input_account_number
-            balance = objectImade.money
-            puts "Your current balance is #{balance}"
-            puts
-        end
-        end
+      puts "Your current balance is #{accounts[user_input_account_number]}"
+
     else
         puts  "Error, Please enter Number between 1 and 5"
         puts
     end
-        p "in here and user input = #{user_input_number}"
         puts "Welcome to the Simple Banking System! 
         1. Create an account 
         2. Deposit money 

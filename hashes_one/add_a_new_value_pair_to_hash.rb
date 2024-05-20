@@ -13,4 +13,9 @@ p menu
 
 menu.store(:salmon, 7.99)
 
+
 p menu
+
+p menu[:salmon]
+
+
