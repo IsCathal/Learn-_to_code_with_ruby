@@ -30,14 +30,19 @@ end
 
 class Hash
   def common_keys_and_values
-    value = []
 
-    cars.include?(:toyota)
-    self.length 
-    cars.include?()
-    value
+    #demo solution 
+    # self.keys & self.values
+    # returns what is common between two arrays
+    value = []
+    self.each_value do |position | 
+      if self.key?(position)
+        value << position
+      end
+      end
+      value
   end
 end
 
   my_hash = { a: "hello", b: "goodbye", "goodbye" => 5 }
-  my_hash.common_keys_and_values 
+  p my_hash.common_keys_and_values 
