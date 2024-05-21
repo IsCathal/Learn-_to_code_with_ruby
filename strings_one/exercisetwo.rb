@@ -6,8 +6,6 @@
 # Examples:
 
 def same_first_and_last_letter(name)
-
-
     name[0] == name[-1]
 end
 # The => indicates the expected return value
@@ -36,7 +34,7 @@ end
 # Examples:
 # The => indicates the expected return value
 #
-# three_number_sum("123")   => 6
-# three_number_sum("567")   => 18
-# three_number_sum("444")   => 12
-# three_number_sum("000")   => 0
+p three_number_sum("123")   
+p three_number_sum("567")   
+p three_number_sum("444")   
+p three_number_sum("000")   
