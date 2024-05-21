@@ -17,5 +17,15 @@ require "set"
 
 def generate_unique_phone_numbers
 
+  numbers = Set.new()
+  customers = File.open("customers.txt")
+  
+  customers.each do |line|
+    part = line.split(', ')
+    numbers.add(part[1])
+  end
+  
+  p numbers
+  end
 
-end
+  generate_unique_phone_numbers

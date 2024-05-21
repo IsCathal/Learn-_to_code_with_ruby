@@ -8,20 +8,17 @@ class Vehicle
 		@wheels = wheels
 		@passengers = passengers
 	end
-	puts self
-	#not great would have to change every mehod, if changed class name
-    #def Vehicle.hello 	
-		def self.hello
-			puts "I'm a  class method"
-		end
 
-		def self.car
-			self.new(4, 6)
-		end
+    class << self
+      def car
+       new(4, 6)
+      end
 
-		def self.truck 
-			self.new(18, 2)
-		end
+      def truck 
+        new(18, 2)
+      end
+    end
+
 
 end
 
@@ -42,4 +39,3 @@ p truck.wheels
 p truck.passengers
 
 
-Vehicle.hello

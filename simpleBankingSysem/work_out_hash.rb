@@ -54,13 +54,17 @@ class Account
         accounts.store(name.account_number, name.money)
         puts "Your account has been created successfully. Your account number is #{name.account_number}"
         puts
-        usercount += 1
       when 2
         puts "Enter your account number:"
         user_input_account_number = gets.to_i
         puts "Enter the amount to deposit" 
         deposit = gets.to_i
-        accounts[user_input_account_number] += deposit
+        if accounts.include?(user_input_account_number)
+          accounts[user_input_account_number] += deposit
+        else
+         puts "Incorrect Account Number"
+         puts
+        end
       when 3
         puts "Enter your account number:"
         user_input_account_number = gets.to_i
@@ -89,4 +93,5 @@ class Account
       end
       
   puts "Thank you for using the Simple Banking System. Goodbye!"
+  
   

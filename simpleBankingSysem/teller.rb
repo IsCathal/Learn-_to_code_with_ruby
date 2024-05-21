@@ -18,13 +18,13 @@ user_input_number = gets.to_i
       accounts.store(name.account_number, name.money)
       puts "Your account has been created successfully. Your account number is #{name.account_number}"
       puts
-      usercount += 1
     when 2
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
       puts "Enter the amount to deposit" 
       deposit = gets.to_i
       accounts[user_input_account_number] += deposit
+      puts
     when 3
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
@@ -32,13 +32,13 @@ user_input_number = gets.to_i
       deposit = gets.to_i
       accounts[user_input_account_number] -= deposit
       puts "#{deposit} has been withdrawn into your account"
-
+      puts
     when 4 
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
       balance = 0 
       puts "Your current balance is #{accounts[user_input_account_number]}"
-
+      puts
     else
         puts  "Error, Please enter Number between 1 and 5"
         puts
