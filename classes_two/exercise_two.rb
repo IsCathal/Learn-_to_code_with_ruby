@@ -51,6 +51,7 @@ class SushiLunchOrder
     @tuna = tuna
     @yellowtail = yellowtail
     @@total_fish_sold += salmon + tuna + yellowtail
+    #this is just for this one instance
   end
 
   def salmon
@@ -69,12 +70,10 @@ class SushiLunchOrder
 
   def self.salmon_special
     self.new(6, 3, 3)
-    @@total_fish_sold += 12
   end
 
-  def self.salmon_special
+  def self.family_combo
     self.new(12, 12, 12)
-    @@total_fish_sold += 36
   end
 
   def self.total_pieces
@@ -89,10 +88,19 @@ class SushiLunchOrder
 end
 
 order1 = SushiLunchOrder.salmon_special
+p order1.salmon     # 6
+p order1.tuna       # 3
+p order1.yellowtail # 3
+p SushiLunchOrder.total_pieces # 12
 
-puts order1
+order2 = SushiLunchOrder.family_combo
+p order2.salmon     # 12
+p order2.tuna       # 12
+p order2.yellowtail # 12
+p SushiLunchOrder.total_pieces # 48
 
-#  p order1.salmon     
-#  p order1.tuna       
-#  p order1.yellowtail 
-  p SushiLunchOrder.total_pieces 
+order3 = SushiLunchOrder.new(3, 4, 5)
+p order3.salmon     # 3
+p order3.tuna       # 4
+p order3.yellowtail # 5
+p SushiLunchOrder.total_pieces # 60
