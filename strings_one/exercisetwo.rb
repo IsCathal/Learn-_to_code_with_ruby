@@ -1,40 +1,26 @@
-# Define a same_first_and_last_letter method that accepts a string. 
-# The method should return true if the first and last character are equal, 
-# and false otherwise.
-# Assume the string will always have 1 or more characters.
+# Define a first_three_characters method that accepts a string.
+# The method should return the first 3 characters of the string.
 #
 # Examples:
 
-def same_first_and_last_letter(name)
-    name[0] == name[-1]
+def first_three_characters(text)
+
+  text[0, 3]
 end
 # The => indicates the expected return value
 #
-# same_first_and_last_letter("runner")   => true
-# same_first_and_last_letter("Runner")   => false
-# same_first_and_last_letter("clock")    => false
-# same_first_and_last_letter("q")        => true
+p first_three_characters("dynasty")  
+# first_three_characters("empire")    => "emp"
 
 
-
-# Define a three_number_sum method that accepts a 3-character string.
-# The method should calculate the sum of the digits of the string. 
-# HINT: You’ll have to figure out a way to convert the
-# string-ified digits to integers.
+# Define a five_from_the_end method that accepts a string.
+# The method should return the last 5 characters of the string.
 #
-
-def three_number_sum(name)
-
-    numone = name[0].to_i
-    numtwo = name[1].to_i
-    numthree = name[2].to_i
-
-    numone + numtwo + numthree
+def five_from_the_end(text)
+ text[-5, 5]
 end
 # Examples:
 # The => indicates the expected return value
 #
-p three_number_sum("123")   
-p three_number_sum("567")   
-p three_number_sum("444")   
-p three_number_sum("000")   
+p five_from_the_end("dynasty")  
+# five_from_the_end("rhinoceros") => "ceros"

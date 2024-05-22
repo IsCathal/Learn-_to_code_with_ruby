@@ -3,17 +3,21 @@
 # search characters appear in the original string. Do not use the
 # built-in count method in your solution.
 #
+# p " ".class.methods.sort
 def custom_count(text, checker)
-    
-        #use each_char
+	counter = 0
+	text.each_char do | char |
+		if checker.include?(char)
+			counter += 1
+		end
+	end
+	counter
 end
 
 
 # Examples:
 # The => indicates the expected return value
-# custom_count("Hello World", "l")     => 3
-p custom_count("Hello World", "l") 
-p custom_count("Hello World", "O")     
+p custom_count("Hello World", "l")   
 # custom_count("Hello World", "z")     => 0
 # custom_count("Hello World", "lo")    => 5
-# custom_count("Hello World", "ol")    => 5
+ p custom_count("Hello World", "ol")   
