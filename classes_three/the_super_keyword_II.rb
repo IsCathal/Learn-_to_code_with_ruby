@@ -46,6 +46,6 @@ end
 
 
 ft = Firetruck.new("Ford", 4)
-
+# puts ft.drive(45)
 
 p ft

@@ -10,5 +10,5 @@ puts
 #after the 5 index
 p fact.index("o",5)
 
-
+# from backwards
 p fact.rindex("o")

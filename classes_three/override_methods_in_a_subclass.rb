@@ -11,6 +11,12 @@ class Employee
   def introduce
      "Hi, my name is #{name} and I am #{age} years old"
   end
+
+  #overwriting to_s method here
+  def to_s
+
+  end
+
 end
  
 class Manager < Employee

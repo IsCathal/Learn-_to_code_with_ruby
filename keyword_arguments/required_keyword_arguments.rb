@@ -15,4 +15,5 @@ p sum(b: 3, a: 2)
 
 #sum': missing keyword: :a (ArgumentError)
 # p sum(b: 3)
-p sum(b: 3, a:2, c:3)
+# p sum(b: 3, a:2, c:3)
+# :in `sum': unknown keyword: :c (ArgumentError)
