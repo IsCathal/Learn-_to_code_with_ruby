@@ -17,12 +17,15 @@ require "set"
 
 def generate_unique_phone_numbers
 
+  file_path = File.join(__dir__, "customers.txt")
+
   numbers = Set.new()
-  customers = File.open("customers.txt")
+  customers = File.open(file_path)
   
-  customers.each do |line|
-    part = line.split(', ')
-    numbers.add(part[1])
+  customers.each do |customer|
+    elements = customer.chomp.split(",")
+    phone = elements[1]
+    numbers.add(phone)
   end
   
   p numbers

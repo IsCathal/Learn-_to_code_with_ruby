@@ -10,7 +10,8 @@ class Computer
     attr_accessor :price
 
 
-    def initialize
+    def 
+        
       @cpu = 'Intel i7'
       @memory = 64
       @storage = '2 TB'

@@ -1,5 +1,6 @@
 require "uri"
 require "net/http"
+# net/http request's uri module 
 
 p URI.class
 p Net.class
