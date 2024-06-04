@@ -36,4 +36,3 @@ puts Employee < Manager
 
 puts Manager < Object
 
-puts Manager < Employee <  Object

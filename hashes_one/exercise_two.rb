@@ -26,7 +26,6 @@ def word_frequency(text)
     words.each { |word| counts[word] += 1 }
     counts
 
-   p text.split(" ").tally
 
 
 end

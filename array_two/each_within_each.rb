@@ -1,9 +1,3 @@
-shirts = ["stripes", "plain white", "plaid", "band"]
+shirts = ['striped', 'plain', 'paisley']    
 
-ties = ["polka dot", "solid color", "boring"]
-
-shirts. each do |shirt| #striped
-    ties.each do |tie|
-        puts shirt + " " + tie
-    end
-end
+ties = ['polka dot', 'solid', 'boring'] 
