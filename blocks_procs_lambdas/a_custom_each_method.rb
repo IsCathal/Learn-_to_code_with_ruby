@@ -1,0 +1,1 @@
+[10, 20, 30].each { |number| puts "The square of my #{number} is #{number * number}"}
